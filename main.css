@@ -1,10 +1,6 @@
 @font-face {
   font-family: Estonia;
-  src: url('/fonts/Estonia-Regular.otf');
-}
-@font-face {
-  font-family: ITC;
-  src: url('/fonts/itc-gorilla.otf');
+  src: url('fonts/Estonia-Regular.otf');
 }
 
 @font-face {
