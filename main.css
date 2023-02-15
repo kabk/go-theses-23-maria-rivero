@@ -9,11 +9,11 @@
 
 @font-face {
   font-family: EB;
-  src: url('/fonts/EBGaramond08-Regular.ttf');
+  src: url('fonts/EBGaramond08-Regular.ttf');
 }
 @font-face {
   font-family: EBI;
-  src: url('/fonts/EBGaramond08-Italic.ttf');
+  src: url('fonts/EBGaramond08-Italic.ttf');
 }
 
 body {
