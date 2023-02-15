@@ -1,19 +1,19 @@
 @font-face {
   font-family: Estonia;
-  src: url('../fonts/Estonia-Regular.otf');
+  src: url('./fonts/Estonia-Regular.otf');
 }
 @font-face {
   font-family: ITC;
-  src: url('../fonts/itc-gorilla.otf');
+  src: url('./fonts/itc-gorilla.otf');
 }
 
 @font-face {
   font-family: EB;
-  src: url('../fonts/EBGaramond08-Regular.ttf');
+  src: url('./fonts/EBGaramond08-Regular.ttf');
 }
 @font-face {
   font-family: EBI;
-  src: url('../fonts/EBGaramond08-Italic.ttf');
+  src: url('./fonts/EBGaramond08-Italic.ttf');
 }
 
 body {
