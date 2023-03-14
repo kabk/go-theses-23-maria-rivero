@@ -1,0 +1,476 @@
+@font-face {
+    font-family:'JUNR';
+    src: url('fonts/Junicode-Regular.otf');
+  }
+
+@font-face {
+  font-family:'JUNI';
+  src: url('fonts/Junicode-Italic.otf');
+}
+
+@font-face {
+  font-family:'OP';
+  src: url('fonts/P22 Operina Fiore Fiore.otf');
+}
+
+@font-face {
+  font-family:'HEL';
+  src: url('fonts/Helvetica Light Regular.otf');
+}
+@font-face {
+  font-family:'AR';
+  src: url('fonts/Arial Unicode.ttf');
+}
+
+@font-face {
+  font-family:'IMI';
+  src: url('fonts/IMFellEnglish-Italic.ttf');
+}
+
+@font-face {
+  font-family:'IMR';
+  src: url('fonts/IMFellEnglish-Regular.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+    
+/*    background-image: url('images/bg.png');*/
+ 
+/*    mix-blend-mode: difference;*/
+   
+}
+
+/*
+.container-fluid{
+    height: 100vh;
+    width: 100vw;
+    top: 10px;
+   
+}
+*/
+
+/*
+.title{
+   position: absolute;
+   left: 220px; 
+}
+ 
+*/
+ 
+/*TOP BAR */
+
+.info-bar {
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    height: 8vh;
+    top: 10px;
+    color: #c4bdb6;
+    opacity: .5;
+    font-family:'IMI';
+/*    font-feature-settings: "kern" 1, "liga" 1, "swsh" 1;*/
+    font-size: 50px;  
+    background-color: white;
+    text-align: center;
+/*    mix-blend-mode: difference;*/
+       
+}
+
+.blur {
+      background-color: #fff;
+      height: 8vh;
+
+      filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+
+/*CONTAINER*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+ 
+
+}
+
+.grid-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+.left {
+  grid-column: 1;
+  height: 87vh;
+  width: 22vw;
+  padding: 15px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  margin-top:90px;
+ 
+
+
+  
+}
+
+.middle {
+    
+  grid-column: 2;
+/*  text-align: justify;*/
+  margin-top:90px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 0px;
+  height: 90vh;
+  width: 50vw;
+  overflow-y: scroll;
+
+/*  background-image: url('images/bg.png');*/
+
+/*  line-height: 1.5;*/
+/*
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+*/
+}
+
+.middle::-webkit-scrollbar {
+  display: none;
+}
+
+.right {
+  grid-column: 3;
+  height: 87vh;
+  width: 22vw;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  margin-top:90px;
+  filter: grayscale(100%);
+  
+
+}
+
+/*//IMAGES//*/
+
+
+
+.right:hover  {
+    filter: none;
+    cursor: pointer;
+}
+
+div1 {
+   
+    visibility: hidden;  
+    
+}
+
+/* COLLAPSIBLE */
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: center;
+    height: 17.5vh;
+    overflow: hidden;
+    background-color: transparent;
+
+
+    
+  }
+  
+  .active1 {
+/*    background-color: white;*/
+/*    color: rgb(2, 2, 2);*/
+    border-radius: 15px;
+
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+/*    background-color: rgb(39, 39, 39);*/
+/*    color: black;*/
+/*    text-align: justify;*/
+    font-size: 20px;
+    line-height: 1.5;
+/*    color: rgb(2, 2, 2);*/
+    font-family: 'HEL';
+    text-align: justify;
+    text-indent: 50px;
+
+
+}
+
+.content-bib {
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+/*    background-color: rgb(39, 39, 39);*/
+/*    color: black;*/
+/*    text-align: justify;*/
+    font-size: 20px;
+    line-height: 1.5;
+/*    color: rgb(2, 2, 2);*/
+     font-family: 'JUNR';
+    
+   
+}
+
+/*COLUMNS BIB*/
+
+.column {
+  float: left;
+  width: 46%;
+  padding: 10px;
+  text-align:left;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*//FICTION//*/
+
+.fiction {
+    
+    position: absolute;
+    top: 73px;
+    right: 80px;
+    width: 40vw;
+    font-size: 25px;
+    text-align: justify;
+    padding: 10px;
+/*    background-color: #c4bdb6;*/
+    background-color: transparent;
+/*    box-shadow: 0 0 0.5rem 0.5rem rgba(0.0, 0.04, 0.07, 0.23);*/
+    z-index: 6;
+    opacity: 1;
+    color: #000000;
+    font-size: 25px; 
+    line-height: 1.5;
+    font-family:'JUNI';
+   
+    
+}
+
+.blurbg {
+    background-color: #fff;
+    position: absolute;
+    top: 73px;
+    right: 80px;
+    width: 40vw;
+    height: 80vh;
+    font-size: 25px;
+    text-align: justify;
+    padding: 10px;
+/*mix-blend-mode: difference;*/
+      
+    filter: blur(30px);
+  -webkit-filter: blur(30px);
+}
+
+
+/*TEXT-STYLES*/
+
+
+.InTextFootnotes{
+    color: #c4bdb6;
+    cursor: pointer;
+}
+.InTextVisuals{
+    background-color: #c4bdb6;
+    color: white;
+    cursor: pointer;   
+    text-align: center;
+}
+
+.footnotes-bib{
+    color: #c4bdb6;
+    font-family: 'HEL';
+    font-size: 20px;
+}
+
+sup {
+    font-size: 15px; 
+    
+}
+sup1 {
+    font-size: 15px; 
+    color: #c4bdb6;
+}
+
+
+.indent {
+    position: relative;
+    text-indent: 0;
+    left: 30pt;
+    width: 45vw;
+    text-align: center;
+      
+}
+
+.indent-italic {
+    position: relative;
+    text-indent: 0;
+    left: 30pt;
+    width: 45vw;
+    text-align: center;
+    font-family: 'JUNI'
+      
+}
+
+h1 {
+font-size: 3.1vw;
+text-align: center;
+font-family:'AR';
+opacity: .1;
+background-color: transparent;
+    
+}
+
+h1:hover{
+opacity: .4;
+}
+
+
+p1 {
+    color: black;
+    opacity: .6;
+    font-size: 20px;
+    font-family: 'HEL'
+    
+}
+
+p2 {
+    color: white;
+    font-family:'HEL';
+    font-size: 15px;  
+    line-height: 1.2;
+}
+
+p3 {
+    color: black;
+    font-family:'JUNI';
+    font-size: 25px;
+    text-align: right;
+/*    line-height: 1.2;*/
+    
+}
+
+p4 {
+    
+    color: black;
+    font-family:'JUNI';
+    font-size: 30px;  
+/*    line-height: 1.2;*/
+    
+}
+
+p5 {
+    color: black;
+    font-family:'JUNI';
+    font-size: 20px;
+    text-align: right;
+    
+}
+
+
+/*POP UP SCROLL*/
+
+.log {
+    justify-self: start;
+    place-self: start;
+    /* https://fluidtypography.com/ */
+    height: var(--fluid-type-size);
+    font-size: var(--fluid-type-size);
+    font-weight: 500;
+    display: none;
+}
+
+.log::before {
+    content: 'Idle time';
+    font-size: 40%;
+    display: block;
+    color: rgba(175, 175, 175, .5);
+}
+
+.notification {
+    position: relative;
+    display: grid;
+    justify-items: right;
+    place-self: start;
+    justify-self: end;
+}
+
+.active,
+.inactive {
+    position: absolute;
+    width: 90vw;
+    opacity: 1;
+}
+
+.active {
+    z-index: 1;
+}
+
+.inactive {
+    background-color: none;
+}
+
+.conceal {
+    transition: opacity .2s ease-in-out;
+    opacity: 0
+}
+
+.reveal {
+    opacity: 1
+}
+
+.grid {
+    /* margin-top: 8px; */
+    font-size: 3rem;
+    z-index: -1;
+    
+}
+
+
+/*
+.grid-item {
+    position: absolute;
+    width: 40vw;
+    font-size: 20px;
+    right: 200px;
+    font-family:JUNI;
+    line-height: 1.2;
+    text-align: justify;
+    padding: 10px;
+    background-color: #c4bdb6;
+    background-color: white;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(0.0, 0.04, 0.07, 0.23);
+    z-index: 6;
+    opacity: 0.8;
+   
+}
+*/
