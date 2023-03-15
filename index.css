@@ -33,14 +33,17 @@
 }
 
 body {
-  height: 100vh;
-  
-/*  overflow: hidden;*/
     
-/*    background-image: url('images/bg.png');*/
- 
-/*    mix-blend-mode: difference;*/
+  height: 100vh;
+  width: 100vw;
    
+}
+
+
+.landing img{
+    
+    height: 98vh;
+    width: 100vw;
 }
 
 .traces {
@@ -48,25 +51,25 @@ body {
 
 }
 
- 
+
 /*TOP BAR */
 
-.info-bar {
+.info-bar img{
     position: fixed;
     z-index: 1;
-    width: 100vw;
+    margin-left: 500px;
+    width: 40vw;
     height: 20vh;
-    top: 0;
-    color: #c4bdb6;
+    top:0px; 
     opacity: .5;
-    font-family:'IMI';
-/*    font-feature-settings: "kern" 1, "liga" 1, "swsh" 1;*/
-    font-size: 50px;  
+/*    font-feature-settings: "kern" 1, "liga" 1, "swsh" 1;*/ 
     background-color: transparent;
-    text-align: center;
 /*    mix-blend-mode: difference;*/
        
 }
+
+
+
 
 /*
 .blur {
@@ -448,37 +451,65 @@ p5 {
 }
 */
 
+
+
 /*//MOBILE//*//*//MOBILE//*//*//MOBILE//*//*//MOBILE//*/
-@media screen and (max-width : 1000px) {
-
-.collapsible {width: 8.33%;}
-.collapsible{width: 16.66%;}
-.collapsible {width: 25%;}
-.collapsible{width: 33.33%;}
-.collapsible{width: 41.66%;}
-.collapsible{width: 50%;}
-.collapsible {width: 58.33%;}
-.collapsible {width: 66.66%;}
-.collapsible {width: 75%;}
-.collapsible {width: 83.33%;}
-.collapsible {width: 91.66%;}
-.collapsible {width: 100%;}
-
-    @media screen and (min-width : 1000px) {
+@media screen and (max-width : 602px) {
     
- .info-bar-mobile {
-    display: none;  
-     
-     }
-
-
+ body {
+    
+  height: 100vh;
+  width: 100vw;
+   
 }
-/*TOP BAR */
 
 
+.landing img{
+    
+    height: auto;
+    width: 115vw;
+    animation: imgscale;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(10);
+    animation-fill-mode: forwards;
+}   
+    
+    @keyframes imgscale{
+        0%{height: 100vh}
+        100%{height: 50vh}
+    }    
+    
+    
+    
+.info-bar img{
+    position: fixed;
+    z-index: 1;
+    margin-left: 10px;;
+    width: 100vw;
+    height: 30vh;
+    top:0px; 
+    opacity: .5;
+/*    font-feature-settings: "kern" 1, "liga" 1, "swsh" 1;*/ 
+    background-color: transparent;
+/*    mix-blend-mode: difference;*/
+       
+}
+    
+   
+        
+/*    object-fit : cover;*/
+        
+    
+    
+    
+}
+
+
+
     
     
     
     
     
-    }
+    
