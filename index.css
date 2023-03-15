@@ -43,8 +43,9 @@ body {
    
 }
 
-.landing {
-   box-shadow: 0 0 8px 8px white inset;    
+.traces {
+   position: absolute;
+
 }
 
  
@@ -54,8 +55,8 @@ body {
     position: fixed;
     z-index: 1;
     width: 100vw;
-    height: vh;
-    top: 10px;
+    height: 20vh;
+    top: 0;
     color: #c4bdb6;
     opacity: .5;
     font-family:'IMI';
@@ -86,8 +87,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 5px;
- 
-
+position: absolute;
 }
 
 .grid-container::-webkit-scrollbar {
@@ -119,12 +119,13 @@ body {
   grid-column: 2;
 /*  text-align: justify;*/
   margin-top:90px;
- padding: 20px;
+  padding: 20px;
   height: 90vh;
   width: 50vw;
   overflow-y: scroll;
+/*  background-image: url('images/bg04.png');*/
 
-/*  background-image: url('images/bg.png');*/
+ 
 
 /*  line-height: 1.5;*/
 /*
