@@ -87,7 +87,8 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 5px;
-position: absolute;
+  position: absolute;
+z-index: 1;
 }
 
 .grid-container::-webkit-scrollbar {
@@ -123,6 +124,7 @@ position: absolute;
   height: 90vh;
   width: 50vw;
   overflow-y: scroll;
+  
 /*  background-image: url('images/bg04.png');*/
 
  
