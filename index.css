@@ -497,9 +497,109 @@ p5 {
 }
     
    
+    
+    
+    
+/* COLLAPSIBLE *//* COLLAPSIBLE *//* COLLAPSIBLE *//* COLLAPSIBLE */
+
+.collapsible {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: center;
+    height: 20vh;
+    overflow: hidden;
+    background-color: transparent;
+
+
+    
+  }
+  
+  .active1 {
+/*    background-color: white;*/
+/*    color: rgb(2, 2, 2);*/
+    border-radius: 5px;
+
+  }
+  
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+/*    background-color: rgb(39, 39, 39);*/
+/*    color: black;*/
+/*    text-align: justify;*/
+    font-size: 15px;
+    line-height: 1.5;
+/*    color: rgb(2, 2, 2);*/
+    font-family: 'HEL';
+    text-align: left;
+    text-indent: 50px;
+
+
+
+}
+    
+    .desktop{
+        display: block;
+    }
         
-/*    object-fit : cover;*/
-        
+    
+  .content-bib {
+    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+/*    background-color: rgb(39, 39, 39);*/
+/*    color: black;*/
+/*    text-align: justify;*/
+    font-size: 15px;
+    line-height: 1.5;
+/*    color: rgb(2, 2, 2);*/
+     font-family: 'JUNR';
+    
+   
+}
+    
+    
+ /*CONTAINER*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: none;
+  grid-column-gap: 0px;
+  position: absolute;
+  z-index: 1;
+}
+
+.grid-container::-webkit-scrollbar {
+  display: none;
+}
+   
+    .desktop{
+        display: none;
+    }
+        .middle{
+        width: 100vw;
+            display: inline-block;
+    }
+
+    p2{
+        color: #c4bdb6;
+    }
+  
+    
+    
+    .indent-italic {
+    position: relative;
+    text-indent: 0;
+    width: 100vw;
+    left: 0px;
+    text-align: center;
+    font-family: 'JUNI'
+      
+}
     
     
     
