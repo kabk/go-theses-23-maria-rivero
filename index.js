@@ -3,12 +3,12 @@
 
 document.querySelectorAll(".InTextFootnotes").forEach(function(InTextFootnote){
     InTextFootnote.addEventListener("click", function(){
-        console.log(InTextFootnote.classList[1]);
-        
+        // console.log(InTextFootnote.classList[1]);
+
         document.querySelectorAll("p2").forEach(function(individualp2){
             if(individualp2.classList.contains(InTextFootnote.classList[1])){
-                console.log("found a p2 tag with the same class!");
-                individualp2.style.color = '#c4bdb6';  
+                // console.log("found a p2 tag with the same class!");
+                individualp2.style.color = '#c4bdb6';
             }
         })
     })
@@ -19,32 +19,45 @@ document.querySelectorAll(".InTextFootnotes").forEach(function(InTextFootnote){
 
 
 
- 
- //TEXT APPEARS ON SCROLL//              
-                 
-   
+
+ //TEXT APPEARS ON SCROLL//
+
+
 // Initialize variables
 let timer, currSeconds = 0;
 
 const startIdleTimer = () => {
+    const log = document.querySelector(".log");
+    const active = document.querySelector(".active");
+
+    if (!log && !active) return;
+
     // Increment the timer seconds
     currSeconds++;
 
-    // Set the timer text to the new value
-    document.querySelector(".log").textContent = currSeconds + ' second' + (currSeconds > 1 ? 's' : '')
+    if (log) {
+        // Set the timer text to the new value
+        document.querySelector(".log").textContent = currSeconds + ' second' + (currSeconds > 1 ? 's' : '')
 
-    // Show timer
-    if (document.querySelector(".log").classList.contains('conceal')) {
-        document.querySelector(".log").classList.toggle('conceal')
+        // Show timer
+        if (document.querySelector(".log").classList.contains('conceal')) {
+            document.querySelector(".log").classList.toggle('conceal')
+        }
     }
 
-    // Hide "Active" notification
-    if (!document.querySelector(".active").classList.contains('conceal')) {
-        document.querySelector(".active").classList.add('conceal')
+    if (active) {
+        // Hide "Active" notification
+        if (!document.querySelector(".active").classList.contains('conceal')) {
+            document.querySelector(".active").classList.add('conceal')
+        }
     }
 }
 
 const resetTimer = () => {
+    const log = document.querySelector(".log");
+    const active = document.querySelector(".active");
+
+    if (!log && !active) return;
 
     // Clear the previous interval
     clearInterval(timer);
@@ -55,16 +68,19 @@ const resetTimer = () => {
     // Set a new interval
     timer = setInterval(startIdleTimer, 1000);
 
-    // Hide timer
-    if (!document.querySelector(".log").classList.contains('conceal')) {
-        document.querySelector(".log").classList.toggle('conceal')
+    if (log) {
+        // Hide timer
+        if (!document.querySelector(".log").classList.contains('conceal')) {
+            document.querySelector(".log").classList.toggle('conceal')
+        }
     }
 
-    // Show "Active" notification
-    if (document.querySelector(".active").classList.contains('conceal')) {
-        document.querySelector(".active").classList.toggle('conceal')
+    if (active) {
+        // Show "Active" notification
+        if (document.querySelector(".active").classList.contains('conceal')) {
+            document.querySelector(".active").classList.toggle('conceal')
+        }
     }
-
 }
 
 // Register several events, not just scroll
@@ -97,7 +113,7 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
 
@@ -105,12 +121,12 @@ for (i = 0; i < coll.length; i++) {
 
 document.querySelectorAll(".InTextVisuals").forEach(function(InTextVisual){
     InTextVisual.addEventListener("click", function(){
-        console.log(InTextVisual.classList[1]);
-        
+        // console.log(InTextVisual.classList[1]);
+
         document.querySelectorAll("div1").forEach(function(individualdiv1){
             if(individualdiv1.classList.contains(InTextVisual.classList[1])){
-                console.log("found a div1 tag with the same class!");
-                individualdiv1.style.visibility = 'visible';  
+                // console.log("found a div1 tag with the same class!");
+                individualdiv1.style.visibility = 'visible';
             }
         })
     })
